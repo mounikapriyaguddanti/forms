@@ -1,0 +1,279 @@
+
+
+body {
+  background: linear-gradient(135deg, #ff6f69, #ffcc5c, #88d498);
+  background-size: 600% 600%;
+  animation: gradientAnimation 15s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.multi-step-form {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/*
+.multi-step-form {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  position: relative; /* Added */
+
+
+.progress {
+  height: 20px;
+  margin-bottom: 30px;
+  background-color: hsl(194, 68%, 72%);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  position: absolute; /* Added */
+  top: 0; /* Added */
+  left: 0; /* Added */
+  display: flex;
+  align-items: center;
+}
+
+/* Rest of your existing CSS */
+
+/*
+body {
+  background: linear-gradient(135deg, #ff6f69, #ffcc5c, #88d498);
+  background-size: 600% 600%;
+  animation: gradientAnimation 15s ease infinite;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.multi-step-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Rest of your existing CSS */
+/*
+.multi-step-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+/*
+.progress {
+  height: 30px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.progress-bar {
+  background-color: rgb(0, 153, 0);
+  height: 100%;
+  transition: width 0.3s ease-in-out;
+  position: absolute;
+  left: 0;
+}
+
+.progress {
+  height: 20px;
+  margin-bottom: 30px;
+  background-color: hsl(194, 68%, 72%);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+*/
+.progress-bar {
+  background-color:rgb(0, 153, 0) ;
+  height: 100%;
+  transition: width 0.3s ease-in-out;
+  position: relative;
+}
+
+.step-number {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  background-color: orangered;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.step-number.active {
+  background-color: green;
+}
+.form-step {
+  margin-bottom: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-step h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.form-step h2 svg {
+  margin-right: 10px;
+  color: orangered;
+}
+
+.form-step h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="text"],
+input[type="tel"],
+.input,
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: orangered;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: orange;
+}
+
+.back-button {
+  margin-right: 10px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.image-preview {
+  width: 100px;
+  height: 80px;
+  padding-left: 10px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.button-group button {
+  margin-left: 10px;
+}
+
+.final-submit {
+  background-color: green;
+}
+
+.final-submit:hover {
+  background-color: rgb(0, 153, 0);
+}
+
+.success-page {
+  text-align: center;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.success-page h1 {
+  font-size: 24px;
+  font-weight: bold;
+  color: green;
+  margin-bottom: 10px;
+}
+
+.success-page p {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.success-page button {
+  background-color: green;
+}
+
+.success-page button:hover {
+  background-color: rgb(0, 153, 0);
+}
