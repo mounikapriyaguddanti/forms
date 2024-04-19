@@ -1,9 +1,8 @@
 
-
 body {
-  background: linear-gradient(135deg, #ff6f69, #ffcc5c, #88d498);
+  background: linear-gradient(135deg,#95d9f4,#fac5d2 , #ffcc5c,#88d498);
   background-size: 600% 600%;
-  animation: gradientAnimation 15s ease infinite;
+  animation: gradientAnimation 10s ease infinite;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -22,126 +21,49 @@ body {
   }
 }
 .multi-step-form {
-  max-width: 900px;
+  max-width: 600px;
   margin: 0 auto;
   padding: 30px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-/*
-.multi-step-form {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
-  position: relative; /* Added */
-
-
 .progress {
-  height: 20px;
+  height: 25px;
   margin-bottom: 30px;
-  background-color: hsl(194, 68%, 72%);
-  border-radius: 10px;
+  background-color: hsl(187, 88%, 63%);
+  border-radius: 15px;
   overflow: hidden;
   width: 100%;
-  position: absolute; /* Added */
-  top: 0; /* Added */
-  left: 0; /* Added */
+  position: relative;
   display: flex;
   align-items: center;
 }
 
-/* Rest of your existing CSS */
-
-/*
-body {
-  background: linear-gradient(135deg, #ff6f69, #ffcc5c, #88d498);
-  background-size: 600% 600%;
-  animation: gradientAnimation 15s ease infinite;
-  min-height: 100vh;
+.progress-bar {
+  background-color: #4caf50;
+  height: 100%;
+  transition: width 0.3s ease-in-out;
+  position: relative;
+  border-radius: 15px;
+  color: #fff;
+  font-weight: bold;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-@keyframes gradientAnimation {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-.multi-step-form {
-  max-width: 600px;
-  margin: 0 auto;
+.preview-section {
+  border: 5px solid #ccc;
+  border-radius: 10px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
+  background-color: #9be9f2;
+  box-shadow: 0 0 5px darkmagenta;
 }
 
-/* Rest of your existing CSS */
-/*
-.multi-step-form {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.preview-section p {
+  margin-bottom: 10px;
 }
-/*
-.progress {
-  height: 30px;
-  margin-bottom: 20px;
-  background-color: #f0f0f0;
-  border-radius: 5px;
-  overflow: hidden;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.progress-bar {
-  background-color: rgb(0, 153, 0);
-  height: 100%;
-  transition: width 0.3s ease-in-out;
-  position: absolute;
-  left: 0;
-}
-
-.progress {
-  height: 20px;
-  margin-bottom: 30px;
-  background-color: hsl(194, 68%, 72%);
-  border-radius: 10px;
-  overflow: hidden;
-  width: 100vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-}
-*/
-.progress-bar {
-  background-color:rgb(0, 153, 0) ;
-  height: 100%;
-  transition: width 0.3s ease-in-out;
-  position: relative;
-}
-
 .step-number {
   font-size: 14px;
   font-weight: bold;

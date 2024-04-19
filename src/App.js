@@ -313,7 +313,9 @@ const MultiStepForm = () => {
           aria-valuenow={progress}
           aria-valuemin="0"
           aria-valuemax="100"
-        ></div>
+        >
+           {Math.round(progress)}%
+          </div>
       </div>
       <form onSubmit={handleSubmit}>
         {step === 1 && (
@@ -473,7 +475,7 @@ const MultiStepForm = () => {
             <div className="input-group">
               <input type="number" name="graduationPassedOutYear" className="input" placeholder="Passed Out Year" value={formData.graduationPassedOutYear} onChange={handleChange} required />
             </div>
-            <h3>Intermediate</h3>
+            <h3>Intermediate/Diploma</h3>
             <div className="input-group">
               <input type="text" name="intermediate" placeholder="Degree" value={formData.intermediate} onChange={handleChange} required />
             </div>
@@ -501,7 +503,8 @@ const MultiStepForm = () => {
         )}
         {step === 4 && (
           <div className="form-step">
-            <h2>Review</h2>
+            <h2>Preview</h2>
+            <div className="preview-section">
             <p>Name: {formData.name}</p>
             <p>Surname: {formData.surname}</p>
             <p>Image:
@@ -529,7 +532,7 @@ const MultiStepForm = () => {
             <p>Intermediate Percentage: {formData.intermediatePercentage}</p>
             <p>10th: {formData.tenth}</p>
             <p>10th Percentage: {formData.tenthPercentage}</p>
-
+            </div>
             <div className="button-group">
               <button type="button" onClick={() => setStep(3)}>Update</button>
               <button type="button" onClick={resetForm}>Delete</button>
